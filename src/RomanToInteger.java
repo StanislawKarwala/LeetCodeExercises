@@ -91,9 +91,9 @@ public class RomanToInteger {
 Iteracja przez string od końca do początku
 String "MCMXCIV" analizujemy od prawej do lewej (od V do M).
 
-Iteracja | i  | Znak | value = romanMap.get(s.charAt(i)) | prevValue | Warunek (value < prevValue) | Operacja | result po operacji | Nowe prevValue
+Iteracja | i  | Znak | value = romanMap.get(s.charAt(i))  | prevValue | Warunek (value < prevValue) | Operacja | result po operacji | Nowe prevValue
 --------------------------------------------------------------------------------------------------------------
-1        | 6  | V    | 5                                  | 0         | ❌ (5 >= 0)                  | +5       | 5                  | 5
+1        | 6  | V    | 5                                  | 0         | ❌ (5 >= 0)                 | +5       | 5                  | 5
 2        | 5  | I    | 1                                  | 5         | ✅ (1 < 5)                  | -1       | 4                  | 1
 3        | 4  | C    | 100                                | 1         | ❌ (100 >= 1)               | +100     | 104                | 100
 4        | 3  | X    | 10                                 | 100       | ✅ (10 < 100)               | -10      | 94                 | 10
