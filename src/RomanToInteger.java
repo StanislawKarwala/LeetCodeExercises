@@ -61,6 +61,11 @@ public class RomanToInteger {
                 'M', 1000
         );
 
+        if(!isValidRoman(s,romanMap)){
+            System.out.println("Not valid roman number: " + s);
+            return -1;
+        }
+
         // Will store final result
         int result = 0;
         // Stores the value of the previous character for comparison
@@ -79,10 +84,41 @@ public class RomanToInteger {
         return result;
     }
 
+    private static boolean isValidRoman(String s, Map<Character, Integer> romanMap){
+        for(char c : s.toCharArray()){
+            if(!romanMap.containsKey(c)){
+                return false;
+            }
+        }
+
+        if(s.contains("IIII") || s.contains("XXXX") || s.contains("CCCC") || s.contains("MMMM")){
+            return false;
+        }
+
+        if(s.contains("VV") || s.contains("LL") || s.contains("DD")){
+            return false;
+        }
+
+        String[] invalidSubtractivePatterns = {"IC", "IL", "ID", "IM", "VX", "VL", "VC", "VD", "VM", "XD"
+                , "XM", "LC", "LD", "LM", "DM"};
+
+        for(String pattern : invalidSubtractivePatterns){
+            if(s.contains(pattern)){
+                return false;
+            }
+        }
+        return true;
+    }
+
     public static void main(String[] args) {
-        System.out.println(romanToInt("III"));      // 3
-        System.out.println(romanToInt("LVIII"));    // 58
-        System.out.println(romanToInt("MCMXCIV"));  // 1994
+        String[] testCases = {"III", "LVIII", "MCMXCIV", "IXC", "VV", "XIX", "IIII"};
+
+        for (String roman : testCases) {
+            int result = romanToInt(roman);
+            if (result != -1) {
+                System.out.println(roman + " = " + result);
+            }
+        }
     }
 }
 
