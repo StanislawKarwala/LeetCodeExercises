@@ -91,12 +91,14 @@ public class RomanToInteger {
 Iteracja przez string od końca do początku
 String "MCMXCIV" analizujemy od prawej do lewej (od V do M).
 
-Iteracja	i	    Znak	value = romanMap.get(s.charAt(i))	prevValue	Warunek (value < prevValue)	    Operacja	result po operacji	Nowe prevValue
-1	        6	    V	                5	                        0	            ❌ (5 >= 0)	                +5	            5	            5
-2	        5	    I	                1	                        5	            ✅ (1 < 5)	                -1	            4	            1
-3	        4	    C	                100	                        1	            ❌ (100 >= 1)	            +100	        104	            100
-4	        3	    X	                10	                        100	            ✅ (10 < 100)	            -10	            94	            10
-5	        2	    M	                1000	                    10	            ❌ (1000 >= 10)	            +1000	        1094	        1000
-6	        1	    C	                100	                        1000	        ✅ (100 < 1000)	            -100	        994	            100
-7	        0	    M	                1000	                    100	            ❌ (1000 >= 100)	        +1000	        1994	        1000
- */
+Iteracja | i  | Znak | value = romanMap.get(s.charAt(i)) | prevValue | Warunek (value < prevValue) | Operacja | result po operacji | Nowe prevValue
+--------------------------------------------------------------------------------------------------------------
+1        | 6  | V    | 5                                  | 0         | ❌ (5 >= 0)                  | +5       | 5                  | 5
+2        | 5  | I    | 1                                  | 5         | ✅ (1 < 5)                  | -1       | 4                  | 1
+3        | 4  | C    | 100                                | 1         | ❌ (100 >= 1)               | +100     | 104                | 100
+4        | 3  | X    | 10                                 | 100       | ✅ (10 < 100)               | -10      | 94                 | 10
+5        | 2  | M    | 1000                               | 10        | ❌ (1000 >= 10)             | +1000    | 1094               | 1000
+6        | 1  | C    | 100                                | 1000      | ✅ (100 < 1000)             | -100     | 994                | 100
+7        | 0  | M    | 1000                               | 100       | ❌ (1000 >= 100)            | +1000    | 1994               | 1000
+*/
+
