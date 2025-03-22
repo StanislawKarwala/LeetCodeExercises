@@ -48,7 +48,6 @@ Przechodzimy przez tablicę krok po kroku:
 
 i   | nums[i] | uniqueCount |     nums po zmianach
 ---------------------
-0	    0	        1	        [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
 1	    0	        1	        [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
 2	    1	        2	        [0, 1, 1, 1, 1, 2, 2, 3, 3, 4]
 3	    1	        2	        [0, 1, 1, 1, 1, 2, 2, 3, 3, 4]
