@@ -1,0 +1,7 @@
+1. Gauss's formula - to wzór pozwalający szybko obliczyć sumę pierwszych n liczb naturalnych bez potrzeby iteracyjnego dodawania.
+Wzór: S = (n * (n + 1)) / 2
+- S – suma liczb od 1 do n
+- n – ostatnia liczba w ciągu
+
+2. Algorytm Boyera-Moore’a - to efektywny algorytm służący do znajdowania elementu większościowego w tablicy
+(tj. elementu, który występuje więcej niż ⌊n/2⌋ razy).
